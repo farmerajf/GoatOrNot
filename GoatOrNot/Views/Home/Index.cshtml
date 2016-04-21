@@ -1,0 +1,22 @@
+﻿@model GoatOrNot.Models.ResultsModel
+@{
+    ViewBag.Title = "Goat Or Not";
+}
+
+<h1>Goat Or Not?</h1>
+
+@if (Model != null)
+{
+    <div class="result">
+        <img src="@Model.ImageUrl" alt="Some image"/>
+        <div class="response">@(@Model.IsGoat ? "That's a goat" : "That's not a goat")</div>
+    </div>
+}
+
+<div class="imageSelection">
+    <form>
+        <input type="text" placeholder="Enter an image url here" name="imageUrl"/>
+        <input type="Submit" value="Goat?"/>
+    </form>
+</div>
+
