@@ -10,6 +10,7 @@
     <div class="result">
         <img src="@Model.ImageUrl" alt="Some image"/>
         <div class="response">@(@Model.IsGoat ? "That's a goat" : "That's not a goat")</div>
+        <div class="response">@(@Model.IsGoat ? string.Format("\"{0}\"", @Model.Quote) : "no goat.....no quote!")</div>
     </div>
 }
 

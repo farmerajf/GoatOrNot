@@ -67,6 +67,7 @@ namespace GoatOrNot.App_Start
         {
             kernel.Bind<IVisionServiceClient>().ToMethod(context => new VisionServiceClient(WebConfigurationManager.AppSettings["ApiKey"]));
             kernel.Bind<IGoatDetector>().To<GoatDetector>();
+            kernel.Bind<IGoatApiClient>().To<GoatApiClient>();
         }
     }
 }
